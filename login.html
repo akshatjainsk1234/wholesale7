@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>WholeSale7 E-commerce website</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,600;0,800;1,200;1,300;1,400;1,600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo arrange-left wid-25">
+                <a href="index.html"><img src="./images/logo.jpg.jpg" /></a>
+
+
+            </div>
+            <div class="search-product arrange-left wid-50">
+                <input type="text" placeholder="search for products">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+            <div class="selected-products arrange-left wid-25">
+                <button class="common-btn"><span>
+                    <i class="fa-regular fa-cart-shopping"></i>0
+                </span></button>
+                <button class="common-btn"><span>0
+                    <i class="fa-solid fa-heart"></i>
+                </span></button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="wid-75 arrange-left">
+        <div class="shop-menu">
+            <ul class="left-menu-list">
+                <li><a href="index.html">home</a></li>
+                <li><a href="About.html">shop</a></li>
+                <li class="dropdown-head"><a href="#"> product Details
+                    <i class="fa-solid fa-angle-down"></i>
+
+                        </a>
+                    <ul class="dropdown">
+                        <li><a href="#">cart</a></li>
+                        <li><a href="#">checkout</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="contact.html">contact</a></li>
+
+
+
+            </ul>
+            <ul class="right-menu-list">
+
+                <li><a href="index.html">Login</a></li>
+
+
+
+
+            </ul>
+
+        </div>
+        <div class="container">
+            <div class="form-box">
+                <h1 id="title">sign up</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="nameField">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Name" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Email" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="password" />
+                        </div>
+                        <p>Forgot password <a href="#">Click here</a></p>
+
+                    </div>
+                </form>
+                <div class="btn-field">
+                    <button type="button" id="signupbtn">sign up</button>
+
+                    <button type="button" id="signinbtn" class="disable">sign in</button>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            let signupbtn = document.getElementById('signupbtn')
+            let signinbtn = document.getElementById("signinbtn")
+            let nameField = document.getElementById("nameField")
+            let title = document.getElementById("title")
+
+            signinbtn.onclick = function() {
+                nameField.style.maxHeight = "0"
+                title.innerHTML = "sign in"
+                signupbtn.classList.add("disable")
+                signinbtn.classList.remove("disable")
+
+            }
+            signupbtn.onclick = function() {
+                nameField.style.maxHeight = "60px"
+                title.innerHTML = "sign up"
+                signupbtn.classList.remove("disable")
+                signinbtn.classList.add("disable")
+
+            }
+        </script>
+
+
+
+</body>
+
+
+
+</html>
